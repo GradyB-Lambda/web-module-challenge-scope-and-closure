@@ -27,10 +27,11 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+      * Primary difference is counter1 has a declared variable, const counter1, that is assigned a value of function counterMaker. Counter2 is a function called counter2, that return a variable that declared in the global scope. 
  * 2. Which of the two uses a closure? How can you tell?
- * 
+      * Counter1; the closure is the assigned value of the declared varibale const counter1 being the function counterMaker 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+      * If the delcared variable of let count is needed to agrigate then counter 1 would be best; if let count needed to be reset than counter 2. 
  *
 */
 
@@ -52,15 +53,23 @@ function counter2() {
 }
 
 
+
+
+
+
 /* Task 2: inning() 
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(){
+  
+  return Math.floor(Math.random()*3);
+  }
+console.log(inning());
 
-    /*Code Here*/
 
-}
+
+
 
 /* Task 3: finalScore()
 
@@ -76,11 +85,20 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+  function finalScore(inning, i){
 
-  /*Code Here*/
+  let home = 0;
+  let away=0;
+    for(let n = 0; n <i; n++){
+      home+=inning();
+      away+=inning();
+    }
+  
+    return `"Home": ${home},\n"Away": ${away},`;
+  }
+  console.log(finalScore(inning, 9));
 
-}
+
 
 /* Task 4: 
 
@@ -101,10 +119,4 @@ and returns the score at each pont in the game, like so:
 8th inning: awayTeam - homeTeam
 9th inning: awayTeam - homeTeam
 Final Score: awayTeam - homeTeam */
-
-
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
-}
-
 
