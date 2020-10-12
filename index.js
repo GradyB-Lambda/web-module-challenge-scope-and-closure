@@ -14,9 +14,9 @@
  * Invoking `processFirstItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'foofoo'.
 */
-function processFirstItem(stringList, callback) {
-  return callback(stringList[0])
-}
+// function processFirstItem(stringList, callback) {
+//   return callback(stringList[0])
+// }
 
 // ⭐️ Example Challenge END ⭐️
 
@@ -34,6 +34,8 @@ function processFirstItem(stringList, callback) {
       * If the delcared variable of let count is needed to agrigate then counter 1 would be best; if let count needed to be reset than counter 2. 
  *
 */
+
+
 
 // counter1 code
 function counterMaker() {
@@ -65,6 +67,7 @@ function inning(){
   
   return Math.floor(Math.random()*3);
   }
+
 console.log(inning());
 
 
@@ -84,6 +87,7 @@ finalScore(inning, 9) might return:
 }
 
 */ 
+
 
   function finalScore(inning, i){
 
@@ -120,3 +124,33 @@ and returns the score at each pont in the game, like so:
 9th inning: awayTeam - homeTeam
 Final Score: awayTeam - homeTeam */
 
+
+function scoreboard(inning, i){
+
+  let home = 0;
+  let away= 0;
+  let string="";
+
+    for(let n = 1; n <=i; n++){
+
+      home+=inning();
+      away+=inning();
+
+      if (n == 1) 
+      string+=`${n}st inning: ${home} - ${away}\n`;
+      else
+      if (n == 2) 
+      string+=`${n}nd inning: ${home} - ${away}\n`;
+      else
+      if (n == 3) 
+      string+=`${n}rd inning: ${home} - ${away}\n`;
+      else
+
+      string+=`${n}th inning: ${home} - ${away}\n`;
+
+}
+string+=`\nFinal Score: ${home} - ${away}`;
+return string;
+
+}
+console.log(scoreboard(inning, 9));

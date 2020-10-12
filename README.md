@@ -42,6 +42,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+  
+    A closure involved a function passing another function. Also, closure is what gives inner function access to outer function's scope.  
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,14 +66,40 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+    Line 59 & 61: both declared variables are invoking the function declared beforehand. 
+  
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same?
+    What could change?The count resets every time you console.log. There could be a a log of the dice rolls pushed into an array.
 
+c. What is the lexical scope of `newRoll`? 
+    newRoll only exist in the function. Function scope is the answer. 
 ### Task 2c - Exit Ticket
 
 Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/WjSzNh9gDrD8Xn8hw/enY3yPRP3nEm7E).
 
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Task 3 - Stretch Goals
 
